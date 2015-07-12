@@ -5,7 +5,7 @@ export ZSH=$HOME/.dotfiles/oh-my-zsh
 # Look in $ZSH/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-export ZSH_THEME="pygmalion"
+export ZSH_THEME="gallois"
 #export ZSH_THEME="random"
 
 # Set to this to use case-sensitive completion
@@ -22,7 +22,7 @@ export CASE_SENSITIVE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.dotfiles/oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew cloudapp colorize compleat dirpersist gem git git-flow github osx mvn node npm nvm rvm ssh-agent)
+plugins=(brew colorize compleat dirpersist gem git git-flow github osx mvn node npm nvm rvm zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -32,9 +32,13 @@ source /usr/local/opt/nvm/nvm.sh
 # Customize to your needs...
 unsetopt correct
 
-export PATH="/Users/"$(whoami)"/.rbenv/shims:${PATH}"
-source "/usr/local/Cellar/rbenv/0.4.0/libexec/../completions/rbenv.zsh"
-rbenv rehash 2>/dev/null
+# export PATH="/Users/"$(whoami)"/.rbenv/shims:${PATH}"
+# source "/usr/local/Cellar/rbenv/0.4.0/libexec/../completions/rbenv.zsh"
+# rbenv rehash 2>/dev/null
 
 # run fortune on new terminal :)
-fortune
+# fortune
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+export PATH=/Users/mzaideel/.rvm/gems/ruby-2.1.6/bin:/Users/mzaideel/.rvm/gems/ruby-2.1.6@global/bin:/Users/mzaideel/.rvm/rubies/ruby-2.1.6/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:.:/bin:/opt/chef/bin:/opt/chef/embedded/bin:/usr/local/zend/bin:/usr/local/zend/mysql/bin:/usr/local/share/npm/bin:/Users/mzaideel/.nvm/v0.10.22/bin:/usr/local/opt/go/libexec/bin:/Users/mzaideel/.rvm/bin:/Users/mzaideel/.rvm/bin:/usr/local/share/python
